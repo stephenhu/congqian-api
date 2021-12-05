@@ -1,2 +1,2 @@
-# congqian-api
-golang based api for congqian
+# congqian-go
+golang based service for congqian
