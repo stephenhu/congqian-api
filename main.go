@@ -1,7 +1,10 @@
 package main
 
 import (
-  "log"
+  "context"
+	"flag"
+	"fmt"
+  //"log"
 
 	"github.com/go-redis/redis/v8"
 )
@@ -9,11 +12,19 @@ import (
 
 var rds *redis.Client
 
+var ctx = context.Background()
+
+
+var (
+	host 		= flag.String("host", DEFAULT_REDIS_HOST, "redis host address")
+	port    = flag.String("port", DEFAULT_REDIS_PORT, "redis port]")
+)
+
 
 func init_redis() {
 
 	rds = redis.NewClient(&redis.Options{
-		Addr: "localhost:6379",
+		Addr: addr(),
 		Password: "",
 		DB: 0,
 	})
@@ -23,7 +34,10 @@ func init_redis() {
 
 func main() {
 	
+	flag.Parse()
+
 	init_redis()
-	log.Printf("Starting %s service...", version())	
-	
+	fmt.Printf("Starting %s service...", version())	
+
+	createUser("a@aol.com", "test", "amuncher")
 } // main
