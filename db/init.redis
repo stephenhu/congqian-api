@@ -1,0 +1,11 @@
+SADD kingdoms chu han qi qin wei yan zhao outlaws barbarians zhou
+HSET kingdom:chu population 2352352 land 5325 wealth 2530208 trees 435901 rocks 520354 cows 31052 
+HSET kingdom:han population 1039934 land 2109 wealth 3052351 trees 835901 rocks 629296 cows 52920
+HSET kingdom:qi population 2032948 land 2520 wealth 2090014 trees 466090 rocks 324209 cows 43925
+HSET kingdom:qin population 2627381 land 5984 wealth 2603089  trees 520241 rocks 728032 cows 29992
+HSET kingdom:wei population 1938003 land 2003 wealth 3420277 trees 823906 rocks 525504 cows 42024
+HSET kingdom:zhao population 2800729 land 3597 wealth 3680012 trees 623420 rocks 459204 cows 44293
+HSET kingdom:outlaws population 505235 land 924 wealth 829432 trees 140294 rocks 82720 cows 4259
+HSET kingdom:barbarians population 4203002 land 9150 wealth 938802 trees 342099 rocks 1025283 cows 65295
+HSET kingdom:zhou population 59235 land 1030 wealth 1029302 trees 234293 rocks 823595 cows 27810
+SADD families bai cai cao chen fan gao gu guo he hong huang hu jiang kong li liu mao pan ren sun wang xi xu yang yu yuan yu zhang zhao zhou zhu

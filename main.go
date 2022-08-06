@@ -37,7 +37,10 @@ func main() {
 	flag.Parse()
 
 	init_redis()
-	fmt.Printf("Starting %s service...", version())	
+	fmt.Printf("Starting %s service...\n", version())	
 
-	createUser("a@aol.com", "test", "amuncher")
+	registerUser("a@aol.com", "test", "amuncher")
+
+	createCharacter("test", false)
+	
 } // main
