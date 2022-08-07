@@ -1,5 +1,10 @@
 package main
 
+import (
+
+)
+
+
 type Demography struct {
 	U10							int
 	U20							int
@@ -18,7 +23,12 @@ type Town struct {
 	Females					Demography
 	Latitude				int
 	Longitude       int
-	Mayor           int
+	Magistrate      string
 	Wealth          int
 	Supply          map[string] Resource
 }
+
+
+func getMunicipal(name string) {
+
+} // getMunicipal

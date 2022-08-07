@@ -37,10 +37,28 @@ func main() {
 	flag.Parse()
 
 	init_redis()
+
+	initRng()
+
 	fmt.Printf("Starting %s service...\n", version())	
 
-	registerUser("a@aol.com", "test", "amuncher")
+	registerUser("a@aol.com", "amuncher", "test")
+	registerUser("barry@aol.com", "freud", "sigmund")
 
 	createCharacter("test", false)
+	createCharacter("sigmund", false)
+
+	k := Kingdom{
+		Name: KINGDOM_CHU,
+		MaleRatio: 48,
+		MedianAge: 34,
+		BirthRate: 2,
+		DeathRate: 2,
+		Population: 1000,
+		TaxRate: 60,
+		ConscriptAge: 16,
+	}
+
+	generateKingdom(&k)
 	
 } // main

@@ -25,6 +25,29 @@ wealth | int |
 trees | int |
 rocks | int |
 cows | int |
+taxRate | int |
+
+#### kingdom municipality
+
+structure | description
+---|---
+**type** | hash map
+**key** | kingdom:[NAME]:municipalities
+
+field | type | description
+---|---|---
+magistrate | |
+deputy magistrate | |
+magistrate protector | |
+guard magistrate | |
+
+land | int |
+population | int |
+wealth | int |
+trees | int |
+rocks | int |
+cows | int |
+
 
 ## families
 
