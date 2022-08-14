@@ -54,7 +54,7 @@ func main() {
 		MedianAge: 34,
 		BirthRate: 2,
 		DeathRate: 2,
-		Population: 1000,
+		Population: 20000,
 		TaxRate: 60,
 		ConscriptAge: 16,
 	}

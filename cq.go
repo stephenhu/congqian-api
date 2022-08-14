@@ -42,7 +42,9 @@ const (
 	DEFAULT_HEIGHT_MIN        	= 145
 	DEFAULT_FEMALE              = 0
 	DEFAULT_MALE                = 1
+	DEFAULT_GENDER              = 2
 	DEFAULT_SKILL_MAX						= 200
+	DEFAULT_WEALTH_MAX          = 200
 	SKILL_MAX										= 5000
 )
 
@@ -59,4 +61,5 @@ const (
 	ERR_NO_KINGDOMS_FOUND				= "No kingdoms found."
 	ERR_NO_MUNICIPALS_FOUND     = "No municipals found"
 	ERR_NO_NAMES_FOUND     			= "No names found"
+	ERR_SET_NOT_FOUND						= "Set not found."
 )

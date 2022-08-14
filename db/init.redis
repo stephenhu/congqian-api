@@ -21,5 +21,6 @@ SADD kingdom:zhao:municipals handan dai taiyuan jinyang zhongshan shanggu guangy
 SADD kingdom:outlaws:municipals jiang xintian dongguo xiacai gong xianyu
 SADD kingdom:barbarians:municipals linhu hu huaiyi gansui guji kui dali xiongnu donghu yinshan
 SADD kingdom:zhou:municipals luoyang zheng
+SADD jobs peasant servant soldier government merchant artisan bandit outlaw
 #SADD municipals danyang cai chen shouchun wu yanying ying changsha song lu jiuyi yangzhai yiyang zheng linzi libei donghai jiaodong xianyang yong nanzheng ba anyi ye wei daliang tang zhongmou pingyang ji yuyang liaoxi handan dai taiyuan jinyang zhoushan shanggu guangyang ye jiang xintian dongguo xiacai gong xianyu 
 #HSET kingdom:chu:municipal:ying 

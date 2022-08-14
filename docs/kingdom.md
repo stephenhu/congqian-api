@@ -1,6 +1,6 @@
 # kingdom
 
-kingdoms are made of villages, towns, and cities.  the difference between these are really the size of administration and population.  villages and towns will not have names, but rather be associated with the population and name of a major city, an integer will be added to the back e.g. shouchun village 1, handan town 34
+kingdoms are made of villages, towns, and cities.  the difference between these are really the size of administration and population.  villages and towns will not have names, but rather be associated with the population and name of a major city, an integer will be added to the back e.g. shouchun village 1, handan town 34.  the total population of china during the time of the warring states was estimated between 18-30m (https://www.quora.com/How-were-Chinese-states-during-the-Warring-States-periods-able-to-field-such-massive-armies-very-often-hundreds-of-thousands-of-men-Why-werent-later-Chinese-states-able-to-do-the-same)
 
 here are some rough guidelines in terms of population
 
@@ -57,9 +57,15 @@ county magistrate | |
 
 role | description | wage
 ---|---|---
-king | |
-queen | |
+marquis | |
+marquise | |
 concubines | |
+minister of war | |
 chancellor | |
 vice chancellor | |
 minister | |
+
+
+## cross kingdom movement
+
+congqian players are free to move around all the kingdoms, but there will be certain stipulations and gate control which often times comes with a toll cost.  to change allegiance to a new kingdom, this requires a more substantive set of requirements like criminal history, family history, mostly if it's based on being asked to serve or if it's of the player's own volition.

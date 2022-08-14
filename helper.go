@@ -87,58 +87,31 @@ func initRangeRating(min int, max int) int {
 } // initRangeRating
 
 
-func initFamily() string {
+func initFromSet(key string) string {
 
-	families, err := rds.SMembers(ctx, KEY_FAMILIES).Result()
+	s, err := rds.SMembers(ctx, key).Result()
 
 	if err != nil {
-		
+
 		log.Println(err)
 		return STRING_EMPTY
 
 	} else {
-
-		count := len(families)
-
-		if count == 0 {
-
-			log.Println(ERR_NO_FAMILIES_FOUND)
-			return STRING_EMPTY
-
-		}	else {
-			return families[initRating(count)]
-		}
-	
-	}
-
-} // initFamily
-
-
-func initKingdom() string {
-
-	kingdoms, err := rds.SMembers(ctx, KEY_KINGDOMS).Result()
-
-	if err != nil {
 		
-		log.Println(err)
-		return STRING_EMPTY
-
-	} else {
-
-		count := len(kingdoms)
+		count := len(s)
 
 		if count == 0 {
 
-			log.Println(ERR_NO_KINGDOMS_FOUND)
+			log.Println(ERR_SET_NOT_FOUND)
 			return STRING_EMPTY
 
 		}	else {
-			return kingdoms[initRating(count)]
+			return s[initRating(count)]
 		}
-	
+
 	}
 
-} // initKingdom
+} // initFromSet
 
 
 func initMunicipal(kingdom string) string {
@@ -169,37 +142,10 @@ func initMunicipal(kingdom string) string {
 } // initMunicipal
 
 
-func initName() string {
-
-	names, err := rds.SMembers(ctx, KEY_NAMES).Result()
-
-	if err != nil {
-		
-		log.Println(err)
-		return STRING_EMPTY
-
-	} else {
-
-		count := len(names)
-
-		if count == 0 {
-
-			log.Println(ERR_NO_NAMES_FOUND)
-			return STRING_EMPTY
-
-		}	else {
-			return names[initRating(count)]
-		}
-	
-	}
-
-} // initName
-
-
 func initGender() int {
 
 	initRng()
 
-	return initRating(DEFAULT_MALE)
+	return initRating(DEFAULT_GENDER)
 
 } // initGender

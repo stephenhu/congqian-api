@@ -68,6 +68,7 @@ type User struct {
 	Pass 					string			`json:"password"`
 	Name          string      `json:"name"`
 	Job          	string      `json:"job"`
+	Municipal     string      `json:"municipal"`
 	Attributes    CharAttributes
 	Combat      	MilitaryAttributes
 }
@@ -94,6 +95,7 @@ const (
 	ATTR_LITERACY           = "literacy"
 	ATTR_LOYALTY         		= "loyalty"
 	ATTR_LUCK            		= "luck"
+	ATTR_MUNICIPAL          = "municipal"
 	ATTR_NAME								= "name"
 	ATTR_PASSWORD						= "password"
 	ATTR_POPULARITY      		= "popularity"
@@ -102,6 +104,7 @@ const (
 	ATTR_STRENGTH        		= "strength"
 	ATTR_TEMPERANCE        	= "temperance"
 	ATTR_VIRTUE          		= "virtue"
+	ATTR_WEALTH             = "wealth"
 	ATTR_WISDOM          		= "wisdom"
 )
 
@@ -138,6 +141,13 @@ const (
 	ATTR_MONKEY       			= "monkey"
 	ATTR_SNAKE       				= "snake"
 	ATTR_TIGER       				= "tiger"
+)
+
+
+const (
+	ATTR_CLEANING           = "cleaning"
+	ATTR_COOKING            = "cooking"
+	ATTR_CRAFTS							= "crafts"
 )
 
 
@@ -206,14 +216,18 @@ func createCharacter(name string, female bool) {
 
 		key := fmt.Sprintf("%s:%s", KEY_USER, name)
 
+		kingdom := initFromSet(KEY_KINGDOMS)
+
 		err := rds.HSet(ctx, key,
 			ATTR_AGE, initRangeRating(DEFAULT_AGE_MIN, DEFAULT_AGE_MAX),
-			ATTR_KINGDOM, initKingdom(),
+			ATTR_KINGDOM, kingdom,
 			ATTR_FEMALE, female,
 			ATTR_HEIGHT, initRangeRating(DEFAULT_HEIGHT_MIN, DEFAULT_HEIGHT_MAX),
-			ATTR_FAMILY, initFamily(),
+			ATTR_FAMILY, initFromSet(KEY_FAMILIES),
+			ATTR_MUNICIPAL, initMunicipal(kingdom),
 			ATTR_NAME, name,
 			ATTR_EXPERIENCE, 0,
+			ATTR_WEALTH, initRating(DEFAULT_WEALTH_MAX),
 			ATTR_LUCK, initRating(DEFAULT_SKILL_MAX),
 			ATTR_VIRTUE, initRating(DEFAULT_SKILL_MAX),
 			ATTR_LOYALTY, initRating(DEFAULT_SKILL_MAX),

@@ -20,8 +20,8 @@ func generateKingdom(k *Kingdom) {
 
 	for i := 0; i < k.Population; i++ {
 
-		family 			:= initFamily()
-		name        := initName()
+		family 			:= initFromSet(KEY_FAMILIES)
+		name        := initFromSet(KEY_NAMES)
 		municipal   := initMunicipal(k.Name)
 	
 		key := npcId(k.Name, municipal, family, name)
@@ -29,11 +29,13 @@ func generateKingdom(k *Kingdom) {
 		err := rds.HSet(ctx, key,
 			ATTR_AGE, initRangeRating(DEFAULT_NPC_AGE_MIN, DEFAULT_NPC_AGE_MAX),
 			ATTR_KINGDOM, k.Name,
+			ATTR_MUNICIPAL, municipal,
 			ATTR_FEMALE, initGender(),
 			ATTR_HEIGHT, initRangeRating(DEFAULT_HEIGHT_MIN, DEFAULT_HEIGHT_MAX),
 			ATTR_FAMILY, family,
 			ATTR_NAME, name,
 			ATTR_EXPERIENCE, initRating(DEFAULT_SKILL_MAX),
+			ATTR_WEALTH, initRating(DEFAULT_WEALTH_MAX),
 			ATTR_LUCK, initRating(DEFAULT_SKILL_MAX),
 			ATTR_VIRTUE, initRating(DEFAULT_SKILL_MAX),
 			ATTR_LOYALTY, initRating(DEFAULT_SKILL_MAX),
