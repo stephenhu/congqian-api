@@ -1,0 +1,7 @@
+# gameplay
+
+players should constantly be able to immerse themselves in the game, players shouldn't have to wait a certain amount of time for tasks to finish, i really dislike the games where certain tasks have a timer for 5m or 3d, users either pay money to speed things up or just wait things out, i think for the majority of players, they will wait things out which means the play duration will be diminished significantly.  instead of putting time limits on certain tasks, it makes sense just to have everything happen semi-realtime, i.e. if you need 20 wood to make a box then just chop 20 wood and afterwards make it.
+
+there maybe some instances where there are an influx of players that are able to produce things that creates a natural disadvantage to other kingdoms, like for instance if one kingdom could create swords faster than the other, but naturally there should be a default amount that makes this difference negligible.
+
+when players are offline, there should be a natural amount of materials that are afforded to players, this shouldn't be that significant, and should operate at a very low rate, but this allows the world to move on even while players are not directly experiencing it.

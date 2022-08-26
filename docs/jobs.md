@@ -47,7 +47,7 @@ purely selling of goods and services, requires a little bit of capital to get in
 
 ### artisan
 
-artisans provide a certain service like carpentry, cooking, cleaning, entertainment, etc.  each municipal will have varying degrees of need for artisans based on 
+artisans provide a certain service like carpentry, cooking, cleaning, entertainment, mining, etc.  each municipal will have varying degrees of need for artisans based on 
 
 ## job types
 
