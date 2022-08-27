@@ -26,6 +26,7 @@ const (
 	KEY_MUNICIPAL          			= "municipal"
 	KEY_MUNICIPALS          		= "municipals"
 	KEY_NAMES          					=	"names"
+	KEY_PLOTS                   = "plots"
 	KEY_NPC                     = "npc"
 	KEY_NPCS                    = "npcs"
 	KEY_USER                    = "user"
@@ -33,9 +34,11 @@ const (
 )
 
 
+// TODO: store defaults to 
 const (
 	DEFAULT_AGE_MAX           	= 26
 	DEFAULT_AGE_MIN           	= 17
+	DEFAULT_AREA_MAX            = 200
 	DEFAULT_BIG           			= 35295
 	DEFAULT_HASH_LENGTH         = 20
 	DEFAULT_HEIGHT_MAX        	= 220

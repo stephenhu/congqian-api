@@ -32,6 +32,12 @@ func init_redis() {
 } // init_redis
 
 
+func load_configs() {
+
+	
+} // load_configs
+
+
 func main() {
 	
 	flag.Parse()
