@@ -7,7 +7,7 @@ config type | key | description
 global | configs:global | prefixed with limit_ means maximum
 keys | configs:keys | key namespaces
 init | configs:init | these are limitations imposed for character creation
-kingdom | configs:kingdom:[NAME] | these are per kingdom and should supercede `configs:init`
+kingdom | configs:kingdom:[NAME] | these are per kingdom and supercede `configs:init`
 
 ## global
 

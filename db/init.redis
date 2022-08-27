@@ -22,5 +22,5 @@ SADD kingdom:outlaws:municipals jiang xintian dongguo xiacai gong xianyu
 SADD kingdom:barbarians:municipals linhu hu huaiyi gansui guji kui dali xiongnu donghu yinshan
 SADD kingdom:zhou:municipals luoyang zheng
 SADD jobs peasant servant soldier government merchant artisan bandit outlaw
-#SADD municipals danyang cai chen shouchun wu yanying ying changsha song lu jiuyi yangzhai yiyang zheng linzi libei donghai jiaodong xianyang yong nanzheng ba anyi ye wei daliang tang zhongmou pingyang ji yuyang liaoxi handan dai taiyuan jinyang zhoushan shanggu guangyang ye jiang xintian dongguo xiacai gong xianyu 
-#HSET kingdom:chu:municipal:ying 
+HSET configs:global hash.length 20 female 0 male 1 skill.max 5000
+HSET configs:init age.min 17 age.max 26 area.min 1 area.max 200 population.tiny 500 population.small 2000 population.medium 35000 population.large 75000 population.xlarge 200000 population.massive 500000 population.metropolis 1000000 skill.max 200 wealth.max 200 npc.age.min 1 npc.age.max 76

@@ -12,6 +12,9 @@ import (
 
 var rds *redis.Client
 
+var confGlobal GlobalConf
+var confInit InitConf
+
 var ctx = context.Background()
 
 
@@ -21,7 +24,7 @@ var (
 )
 
 
-func init_redis() {
+func initRedis() {
 
 	rds = redis.NewClient(&redis.Options{
 		Addr: addr(),
@@ -29,20 +32,21 @@ func init_redis() {
 		DB: 0,
 	})
 
-} // init_redis
-
-
-func load_configs() {
-
-	
-} // load_configs
+} // initRedis
 
 
 func main() {
 	
 	flag.Parse()
 
-	init_redis()
+	fmt.Printf("Connecting to Redis...\n")	
+
+	initRedis()
+
+	fmt.Printf("Loading configuration...\n")
+
+	confGlobal = loadConfigs(KEY_CONF_GLOBAL)
+	confInit = loadConfigs(KEY_CONF_INIT)
 
 	initRng()
 

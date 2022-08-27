@@ -2,17 +2,18 @@ package main
 
 import (
   "fmt"
+	"log"
 )
 
 
 const (
-  ATTR_AREA							= "area"							`json:"area"`
-	ATTR_OWNER						= "owner"							`json:"owner"`
-	ATTR_FARMABLE					= "farmable"					`json:"farmable"`
-	ATTR_WATER						= "water"							`json:"water"`
-	ATTR_ELEVATION				= "elevation"					`json:"elevation"`
-	ATTR_RESOURCES				= "resources"					`json:"resources"`
-	ATTR_INHABITANTS			= "inhabitants"				`json:"inhabitants"`
+  ATTR_AREA							= "area"
+	ATTR_OWNER						= "owner"
+	ATTR_FARMABLE					= "farmable"
+	ATTR_WATER						= "water"
+	ATTR_ELEVATION				= "elevation"
+	ATTR_RESOURCES				= "resources"
+	ATTR_INHABITANTS			= "inhabitants"
 )
 
 
@@ -36,7 +37,10 @@ func createPlot(kingdom string, municipal string, plot string) {
 	err := rds.HSet(ctx, key,
 		ATTR_AREA, initRating(DEFAULT_AREA_MAX),
 		ATTR_KINGDOM, kingdom,
-
 	)
+
+	if err != nil {
+		log.Println(err)
+	}
 	
 } // createPlot

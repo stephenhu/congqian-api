@@ -24,6 +24,22 @@ func addr() string {
 } // addr
 
 
+func loadConfigs(key string) interface{} {
+
+	ghm, err := rds.HGetAll(ctx, key).Result()
+
+	if err != nil {
+		
+		log.Println(err)
+		return nil
+
+	} else {
+		return ghm
+	}
+	
+} // loadConfigs
+
+
 func userKey(email string) string {
 	return hash(email+SALT, DEFAULT_HASH_LENGTH)
 } // userKey
@@ -49,6 +65,7 @@ func hash(c string, length int) string {
 } // hash
 
 
+// TODO
 func encrypt(clearText string) string {
   return STRING_EMPTY
 } // encrypt
