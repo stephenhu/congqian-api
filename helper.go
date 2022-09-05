@@ -24,17 +24,20 @@ func addr() string {
 } // addr
 
 
-func loadConfigs(key string) interface{} {
+func loadConfigs(key string) {
 
-	ghm, err := rds.HGetAll(ctx, key).Result()
+	var err error
+
+	if key == KEY_CONF_GLOBAL {
+		err = rds.HGetAll(ctx, key).Scan(&confGlobal)
+	} else if key == KEY_CONF_INIT {
+		err = rds.HGetAll(ctx, key).Scan(&confInit)
+	} else {
+		log.Fatal("Unsupported key, aborting app... ", key)
+	}
 
 	if err != nil {
-		
 		log.Println(err)
-		return nil
-
-	} else {
-		return ghm
 	}
 	
 } // loadConfigs

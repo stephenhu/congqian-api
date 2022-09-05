@@ -12,8 +12,8 @@ import (
 
 var rds *redis.Client
 
-var confGlobal GlobalConf
-var confInit InitConf
+var confGlobal 	GlobalConf
+var confInit 		InitConf
 
 var ctx = context.Background()
 
@@ -45,8 +45,8 @@ func main() {
 
 	fmt.Printf("Loading configuration...\n")
 
-	confGlobal = loadConfigs(KEY_CONF_GLOBAL)
-	confInit = loadConfigs(KEY_CONF_INIT)
+	loadConfigs(KEY_CONF_GLOBAL)
+	loadConfigs(KEY_CONF_INIT)
 
 	initRng()
 
@@ -59,16 +59,17 @@ func main() {
 	createCharacter("sigmund", false)
 
 	k := Kingdom{
-		Name: KINGDOM_CHU,
+		Name: KINGDOM_WEI,
 		MaleRatio: 48,
 		MedianAge: 34,
 		BirthRate: 2,
 		DeathRate: 2,
-		Population: 20000,
+		Population: 2000,
 		TaxRate: 60,
 		ConscriptAge: 16,
 	}
 
 	generateKingdom(&k)
-	
+
+
 } // main

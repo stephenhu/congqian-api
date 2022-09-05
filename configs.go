@@ -6,27 +6,29 @@ import (
 
 
 type GlobalConf struct {
-	HashLength 					int					`json:"hashLength"`
-	Female 							int					`json:"female"`
-	Male 								int					`json:"male"`
-	SkillMax 						int					`json:"skillMax"`
+	HashLength 					int					`redis:"hash:length"`
+	Female 							int					`redis:"female"`
+	Male 								int					`redis:"male"`
+	SkillMax 						int					`redis:"skill:max"`
 }
 
 
 type InitConf struct {
-	AgeMin 									int					`json:"ageMin"`
-	AgeMax 									int					`json:"ageMax"`
-	AreaMin 								int					`json:"areaMin"`
-	AreaMax 								int					`json:"areaMax"`
-	PopulationTiny 					int					`json:"populationTiny"`
-	PopulationSmall 				int					`json:"populationSmall"`
-	PopulationMedium 				int					`json:"populationMedium"`
-	PopulationLarge 				int					`json:"populationLarge"`
-	PopulationXLarge 				int					`json:"populationXLarge"`
-	PopulationMassive 			int					`json:"populationMassive"`
-	PopulationMetropolis 		int					`json:"populationMetropolis"`
-	SkillMax 								int					`json:"skillMax"`
-	WealthMax 							int					`json:"wealthMax"`
-	NpcAgeMin 							int					`json:"npcAgeMin"`
-	NpcAgeMax 							int					`json:"npcAgeMax"`
+	AgeMin 									int					`redis:"age:min"`
+	AgeMax 									int					`redis:"age:max"`
+	AreaMin 								int					`redis:"area:min"`
+	AreaMax 								int					`redis:"area:max"`
+	HeightMin               int         `redis:"height:min"`
+	HeightMax               int         `redis:"height:max"`
+	PopulationTiny 					int					`redis:"population:tiny"`
+	PopulationSmall 				int					`redis:"population:small"`
+	PopulationMedium 				int					`redis:"population:medium"`
+	PopulationLarge 				int					`redis:"population:large"`
+	PopulationXLarge 				int					`redis:"population:xlarge"`
+	PopulationMassive 			int					`redis:"population:assive"`
+	PopulationMetropolis 		int					`redis:"population:metropolis"`
+	SkillMax 								int					`redis:"skill:max"`
+	WealthMax 							int					`redis:"wealth:max"`
+	NpcAgeMin 							int					`redis:"npc:age:min"`
+	NpcAgeMax 							int					`redis:"npc:age:max"`
 }

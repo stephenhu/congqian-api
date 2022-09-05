@@ -14,7 +14,7 @@ SADD names ai an bai bei bo cai chen cheng chong chun cong dai dan dang dong dun
 SADD kingdom:chu:municipals danyang cai chen shouchun wu yanying ying changsha song lu jiuyi
 SADD kingdom:han:municipals yangzhai yiyang zheng
 SADD kingdom:qi:municipals linzi libei donghai jiaodong
-SADD kingdom:qin:municipals xianyang yong nanzheng ba
+SADD kingdom:qin:municipals xianyang yong nanzheng ba longxi hexi lishan shaoliang huashan luoshui yueyang guanzhong hangu qindong
 SADD kingdom:wei:municipals anyi ye wei daliang tang zhongmou pingyang
 SADD kingdom:yan:municipals ji yuyang liaoxi
 SADD kingdom:zhao:municipals handan dai taiyuan jinyang zhongshan shanggu guangyang ye
@@ -22,5 +22,5 @@ SADD kingdom:outlaws:municipals jiang xintian dongguo xiacai gong xianyu
 SADD kingdom:barbarians:municipals linhu hu huaiyi gansui guji kui dali xiongnu donghu yinshan
 SADD kingdom:zhou:municipals luoyang zheng
 SADD jobs peasant servant soldier government merchant artisan bandit outlaw
-HSET configs:global hash.length 20 female 0 male 1 skill.max 5000
-HSET configs:init age.min 17 age.max 26 area.min 1 area.max 200 population.tiny 500 population.small 2000 population.medium 35000 population.large 75000 population.xlarge 200000 population.massive 500000 population.metropolis 1000000 skill.max 200 wealth.max 200 npc.age.min 1 npc.age.max 76
+HSET configs:global hash:length 20 female 0 male 1 skill:max 5000
+HSET configs:init age:min 17 age:max 26 area:min 1 height:min 145 height:max 220 area:max 200 population:tiny 500 population:small 2000 population:medium 35000 population:large 75000 population:xlarge 200000 population:massive 500000 population:metropolis 1000000 skill:max 200 wealth:max 200 npc:age:min 1 npc:age:max 76
